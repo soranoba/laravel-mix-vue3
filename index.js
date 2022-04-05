@@ -86,22 +86,6 @@ class Vue3 {
    */
   webpackRules() {
     let rules = [
-      {
-        test: /\.vue$/,
-        use: [
-          {
-            loader: "vue-loader",
-          },
-        ],
-      },
-
-      {
-        test: this.options.jsx ? /\.(js|jsx)$/ : /\.(js)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
     ];
 
     if (this.options.typescript) {
